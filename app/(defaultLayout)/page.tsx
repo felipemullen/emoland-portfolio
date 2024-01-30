@@ -1,15 +1,25 @@
-import { Anchor } from '../components/anchor';
-import { Sidebar } from '../components/sidebar.component';
+import { GltfViewer } from '../components/gltf-viewer';
 
 export default function Home() {
     return (
         <main className="h-screen">
-            <Sidebar />
-            <div className="h-full w-full flex items-end justify-end">
-                <div className="text-end w-6/12 p-20">
-                    <h1 className="font-sans text-7xl tracking-widest font-thin underline underline-offset-4 decoration-2">Felipe Mullen</h1>
-                </div>
+            <div className="fixed text-right text-neutral-600 top-0 right-0 z-50 md:pl-32 pr-6 pt-6 2xl:w-6/12">
+                <a href="/about">
+                    <h1 className="text-6xl font-bold uppercase">Felipe Mullen</h1>
+                </a>
             </div>
+            <div className="fixed w-full text-right text-neutral-600 top-0 right-0 -z-10 md:pl-32 pr-6 pt-6 2xl:w-6/12">
+                <a className="invisible">
+                    <h1 className="text-6xl font-bold uppercase">Felipe Mullen</h1>
+                </a>
+                <p className="text-3xl text-neutral-500">
+                    programmer, hobby artist,
+                </p>
+                <p className="text-3xl text-neutral-500">
+                    founder of <span className="text-neutral-400">Ind3x Interactive</span>
+                </p>
+            </div>
+            <GltfViewer />
         </main>
     );
 }

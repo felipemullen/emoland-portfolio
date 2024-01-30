@@ -39,7 +39,7 @@ export function Sidebar() {
     const whitespaceLink = ' '.repeat(maxLinkLength);
 
     return (
-        <div className="fixed group/bar top-0 left-0 h-screen bg-white/15 border-r border-neutral-200 hover:border-violet-300">
+        <div className="fixed group/bar top-0 left-0 h-screen bg-white/15 border-r border-neutral-200 hover:border-violet-300 z-50">
 
             {/* This div is a hacky way I figured out for animating the bar opening and staying open even after a specific link is not hovered */}
             <div className="px-3 w-auto max-w-0 group-hover/bar:max-w-screen-xl duration-1000 group-hover/bar:duration-500 ease-out group-hover/bar:ease-in transition-[max-width]">

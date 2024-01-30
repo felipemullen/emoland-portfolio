@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Sidebar } from '../components/sidebar.component';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -17,8 +18,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     <div className="overlay h-screen w-screen">
                     </div>
                 </div>
-                <div className="fixed h-screen w-screen"></div>
                 {children}
+                <Sidebar />
             </body>
         </html>
     );

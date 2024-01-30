@@ -18,7 +18,8 @@ export function ImgRenderer(props: { alt: string; }) {
         }
     }
 
-    return (<img {...props} className="rounded" style={styles} />);
+    {/* eslint-disable-next-line @next/next/no-img-element */ }
+    return (<img {...props} className="rounded" style={styles} alt="image" />);
 }
 
 export function CodeRenderer({ children, ...props }) {
