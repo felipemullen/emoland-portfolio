@@ -1,19 +1,37 @@
-import { Activity, Camera, Edit3, Feather, Meh, Monitor, Smile } from 'react-feather';
+import { Activity, Camera, Edit3, Feather, Home, Meh, Award, Printer, Smile } from 'react-feather';
 
 export function Sidebar() {
 
     const links = [
         {
-            name: 'tech',
-            href: '/tech',
-            icon: <Monitor />,
-            hoverIcon: <Monitor />
+            name: 'home',
+            href: '/',
+            icon: <Home />,
+            hoverIcon: <Home />
+        },
+        {
+            name: 'about',
+            href: '/about',
+            icon: <Meh />,
+            hoverIcon: <Smile />
+        },
+        {
+            name: 'resume',
+            href: '/resume',
+            icon: <Printer />,
+            hoverIcon: <Printer />
         },
         {
             name: 'blog',
             href: '/blog',
             icon: <Edit3 />,
             hoverIcon: <Edit3 />
+        },
+        {
+            name: 'projects',
+            href: '/projects',
+            icon: <Award />,
+            hoverIcon: <Award />
         },
         {
             name: 'photography',
@@ -26,12 +44,6 @@ export function Sidebar() {
             href: '/poetry',
             icon: <Feather />,
             hoverIcon: <Feather />
-        },
-        {
-            name: 'about',
-            href: '/about',
-            icon: <Meh />,
-            hoverIcon: <Smile />
         }
     ];
 
@@ -59,7 +71,7 @@ export function Sidebar() {
                             <span className="group-hover/link:hidden bg-white/50 p-1">{link.icon}</span>
                             <span className="hidden group-hover/link:block outline outline-1 outline-offset-2 bg-slate-200/50 p-1 rounded">{link.hoverIcon}</span>
 
-                            <span className="w-100 max-w-0 overflow-hidden group-hover/link:max-w-screen-xl origin-left duration-300 group-hover/bar:duration-1000 ease-in-out transition-[max-width]">
+                            <span className="w-100 max-w-0 rounded group-hover/link:bg-white group-hover/link:ml-2 group-hover/link:pr-2 overflow-hidden group-hover/link:max-w-screen-xl origin-left duration-300 group-hover/bar:duration-1000 ease-in-out transition-[max-width]">
                                 <span className="font-mono uppercase font-light whitespace-pre">&nbsp;{link.name}</span>
                             </span>
                         </a>

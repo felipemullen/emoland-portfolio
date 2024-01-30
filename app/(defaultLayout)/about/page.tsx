@@ -18,6 +18,9 @@ export default function AboutPage() {
                         Hey, I&apos;m Felipe 👋 a creative type based in <Anchor target="_blank" href="https://en.wikipedia.org/wiki/San_Diego">San Diego</Anchor>,
                         who runs an indie game company, <Anchor href="https://ind3x.games">Ind3x Interactive</Anchor>.
                     </p>
+                    <p className="mt-4 font- bg-zinc-50/50 p-3 text-sm text-center border ">
+                        <i>If you&apos;re interested in my work, feel free to view and/or download a copy of my <Anchor href="/resume">resume</Anchor>.</i>
+                    </p>
                     <p className="mt-4">
                         I have a lot of different <Anchor href="/projects">projects</Anchor> 😅, and although&nbsp;
                         <Anchor href="/photography">photography</Anchor> is a hobby of mine, I happen to share the same
