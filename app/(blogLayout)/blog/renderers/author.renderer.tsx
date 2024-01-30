@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { CSSProperties } from 'react';
 
 export interface AuthorProps {
@@ -20,7 +19,8 @@ export function Author(props: AuthorProps) {
         <a className="my-7" href={githubProfile}>
             <hr className="my-5 border-indigo-200" />
             <div className="flex items-center justify-center">
-                <Image src={githubImage} style={imageStyle} height={imageSize} width={imageSize} alt="Felipe Mullen" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={githubImage} style={imageStyle} height={imageSize} width={imageSize} alt="Felipe Mullen" />
                 <span className="text-secondary">By /{props.name}</span>
             </div>
             <hr className="my-5 border-indigo-200" />

@@ -4,7 +4,7 @@ import { ArrowLeft } from 'react-feather';
 
 export default function AboutPage() {
     return (
-        <div className="fixed h-full w-full top-0 left-0 flex justify-center pt-32 z-20">
+        <div className="fixed h-full w-full top-0 left-0 flex justify-center pt-32 z-20 overflow-x-hidden overflow-y-scroll">
             <div className="pl-16 pr-8 md:px-0 md:w-6/12">
                 <div className="mb-12">
                     <h1 className="text-center text-6xl font-bold uppercase text-neutral-800">Felipe Mullen</h1>
@@ -33,6 +33,7 @@ export default function AboutPage() {
                     <p>
                         {/* TODO: some verse */}
                     </p>
+                    <hr className="my-12" />
                 </div>
             </div>
         </div>
