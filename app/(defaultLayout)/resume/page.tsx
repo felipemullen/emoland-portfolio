@@ -1,13 +1,14 @@
 export default function ResumePage() {
     return (
         <div className="fixed h-full w-full top-0 left-0 z-20 pl-16 md:pr-6">
-            <div className="h-full flex flex-col">
-                <div className="flex justify-between items-center mt-2 mx-3 bg-zinc-50/50 p-3 rounded border">
+            <div className="h-full w-full flex flex-col">
+                <div className="flex justify-between items-center mt-2 bg-zinc-50/50 p-3 rounded border">
                     <span className="text-neutral-800">Felipe Mullen, <i>curriculum vitae</i></span>
-                    <small className="text-neutral-600">(last updated: December 2023)</small>
+                    <small className="text-neutral-600">(last updated: January 2024)</small>
                 </div>
-                <div className="grow p-3 m-3 bg-zinc-50 border rounded">
-                    <iframe className="w-full h-full" src="/resume/FelipeMullen_CV_2023.pdf" />
+                <div className="grow w-full p-3 my-3 bg-zinc-50 border rounded">
+                    <iframe className="w-full h-1/2" src="/resume/felipe_mullen_cv_light_2024.pdf" />
+                    <iframe className="w-full h-1/2" src="/resume/felipe_mullen_cv_dark_2024.pdf" />
                 </div>
             </div>
         </div>
