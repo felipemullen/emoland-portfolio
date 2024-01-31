@@ -53,7 +53,7 @@ export default function PhotographyPage() {
                 <div className="my-8 text-right">
                     <h1 className="text-4xl text-neutral-600 font-bold uppercase">/photography</h1>
                     <p className="text-xl text-neutral-500">
-                        A random assortment of shots I've taken over the years.
+                        A random assortment of shots I&apos;ve taken over the years.
                     </p>
                     <hr className="my-2" />
                 </div>
