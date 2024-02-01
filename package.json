@@ -17,7 +17,8 @@
     "react-dom": "^18",
     "react-feather": "^2.0.10",
     "react-markdown": "^9.0.1",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
