@@ -1,8 +1,14 @@
 import { Pic } from '@/app/components/pic';
+import { PhotoService } from '@/app/services/photo.service';
 
 interface Weight {
     weight: number;
     value: string;
+}
+
+interface ImageChoice {
+    pathname: string;
+    aspect: string;
 }
 
 export default function PhotographyPage() {
@@ -34,17 +40,16 @@ export default function PhotographyPage() {
         { weight: 20, value: 'yl' },
     ];
 
-    const imageSequence = [];
-    for (let index = 1; index <= 113; index++) {
-        const aspect = chooseRandomValue(weights);
-        imageSequence.push({ index, aspect });
-    }
+    const photos = PhotoService.listPics();
+    const randomPhotos: ImageChoice[] = [];
+    while (photos.length > 0) {
+        const index = Math.floor(Math.random() * photos.length);
 
-    const randomSequence = [];
-    while (imageSequence.length > 0) {
-        const index = Math.floor(Math.random() * imageSequence.length);
-        randomSequence.push(imageSequence[index]);
-        imageSequence.splice(index, 1);
+        const aspect = chooseRandomValue(weights);
+        const image = photos[index];
+
+        randomPhotos.push({ pathname: image, aspect });
+        photos.splice(index, 1);
     }
 
     return (
@@ -58,8 +63,8 @@ export default function PhotographyPage() {
                     <hr className="my-2" />
                 </div>
                 <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-1 sm:gap-2 lg:gap-4">
-                    {randomSequence.map(({ index, aspect }) => (
-                        <Pic key={index} srcIndex={index} aspect={aspect} />
+                    {randomPhotos.map(({ pathname, aspect }, index) => (
+                        <Pic key={index} pathname={pathname} aspect={aspect} />
                     ))}
                 </div>
             </div>
