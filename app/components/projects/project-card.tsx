@@ -31,10 +31,14 @@ export function ProjectCard(props: ProjectCardProps) {
                     <p className="mb-3 font-normal text-neutral-700 dark:text-neutral-400">{props.description}</p>
                 </div>
                 <div className="mt-auto flex">
+                    <div className="mr-auto">
+                        {/*
                     <LinkDark href={pageLink} >
                         <span className="mr-2">details</span>
                         <ArrowRight size={14} />
                     </LinkDark>
+                    */}
+                    </div>
                     {props.app && (
                         <LinkLight href={props.app} target="_blank" title="Go to App">
                             <ExternalLink size={16} />

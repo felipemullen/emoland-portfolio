@@ -5,6 +5,29 @@ export default function ProjectsPage() {
 
     const webProjects: ProjectCardProps[] = [
         {
+            image: 'shawnstone.png',
+            href: 'shawn-stone',
+            title: 'shawn-stone.com',
+            description: 'A personal website for audiobook narrator Shawn Stone',
+            // github: 'https://github.com/pastor-shawn/shawn-stone-web',
+            app: 'https://shawnstone.up.railway.app/'
+        },
+        {
+            image: 'tobindalton.png',
+            href: 'tobin-dalton',
+            title: 'tobindalton.com',
+            description: 'A photography portfolio website for Tobin Dalton',
+            // github: 'https://github.com/felipemullen/tobi-portfolio',
+            app: 'https://tobindalton.com/'
+        },
+        {
+            image: 'drefolio.gif',
+            href: 'andre-mullen',
+            title: 'andremullen.com',
+            description: 'A photography portfolio website for Andre Mullen',
+            app: 'https://dreezy.emo.land/'
+        },
+        {
             image: 'chord-fiddle.png',
             href: 'chord-fiddle',
             title: 'Chord Fiddle',
@@ -36,6 +59,17 @@ export default function ProjectsPage() {
         }
     ];
 
+    const macosProjects: ProjectCardProps[] = [
+        {
+            image: 'rice-paper.png',
+            href: 'rice-paper',
+            title: 'RicePaper: Japanese Wallpapers',
+            description: 'A MacOS Tray application for daily Japanese language learning',
+            // github: 'https://github.com/felipemullen/RicePaper/',
+            app: 'https://apps.apple.com/us/app/ricepaper-japanese-wallpapers/id1497443393'
+        }
+    ];
+
     const pluginProjects: ProjectCardProps[] = [
         {
             image: 'tldr-panel.gif',
@@ -52,6 +86,7 @@ export default function ProjectsPage() {
             <div className="h-full">
                 <h1 className="text-3xl font-bold uppercase text-right text-neutral-600 mt-6 mb-12">/projects</h1>
                 <ProjectSection header="Web Apps" projects={webProjects} />
+                <ProjectSection header="Mac OS Apps" projects={macosProjects} />
                 <ProjectSection header="Plugins / Extensions" projects={pluginProjects} />
             </div>
         </div>
