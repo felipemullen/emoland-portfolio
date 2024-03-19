@@ -56,11 +56,12 @@ export class BlogService {
         const files = fs.readdirSync(dir);
 
         const posts = files.map((file) => new Post(file));
-        posts.sort((a: Post, b: Post) => parseInt(b.id) - parseInt(a.id));
 
         for (const post of posts) {
             await post.readMetadata();
         }
+
+        posts.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
 
         return posts;
     }

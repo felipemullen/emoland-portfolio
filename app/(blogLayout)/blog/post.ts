@@ -4,11 +4,12 @@ export interface PostMetadata {
     author?: string;
     publishedDate?: string;
     tags?: string[];
+    title?: string;
 }
 
 export class Post {
     private _fullname: string;
-    private _metadata: PostMetadata = {};
+    private _metadata: PostMetadata = null;
 
     /**
      * @param fullname The filename of the post, e.g. 0001_post-title.md
@@ -29,7 +30,7 @@ export class Post {
      * Easy to read slug: 0001_post-title.md -> post-title
      */
     get slug() {
-        return this._fullname.split('_')[1].split('.')[0];
+        return this._metadata.title || this._fullname.split('_')[1].split('.')[0];
     }
 
     /**
@@ -60,7 +61,6 @@ export class Post {
                 try {
                     const metadata = JSON.parse(data.trim());
                     this._metadata = metadata;
-                    console.log('metadata loaded', this._metadata);
                 } catch (error) {
                     console.log('[Post] Error parsing metadata:');
                     console.error(error);

@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Author } from './author.renderer';
+import { Components } from 'react-markdown';
 
 export function AnchorRenderer(props: any) {
     return (<a {...props} target="_blank" className="" rel="noopener noreferrer" />);
@@ -23,20 +23,13 @@ export function ImgRenderer(props: { alt: string; }) {
 }
 
 export function CodeRenderer({ children, ...props }) {
-    if (props.inline) {
-        return (<code {...props}>{children}</code>);
-    }
-
     const value = String(children).replace(/\n$/, '');
 
-    if (props.className === 'language-author') {
-        return (<Author name={value}></Author>);
-    }
-
-    return (<code {...props}>{value}</code>);
+    // return (<code className="before:content-[''] after:content-[''] text-sm text-gray-500 bg-gray-200 p-1 rounded whitespace-pre">{value}</code>);
+    return (<small>{value}</small>);
 }
 
-export const customComponents = {
+export const customComponents: Components = {
     img: ImgRenderer,
     a: AnchorRenderer,
     code: CodeRenderer
