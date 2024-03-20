@@ -30,7 +30,7 @@ export class Post {
      * Easy to read slug: 0001_post-title.md -> post-title
      */
     get slug() {
-        return this._metadata.title || this._fullname.split('_')[1].split('.')[0];
+        return this._fullname.split('_')[1].split('.')[0];
     }
 
     /**
@@ -45,7 +45,7 @@ export class Post {
     }
 
     get title() {
-        return this.slug.replace(/-/g, ' ');
+        return this._metadata.title || this.slug.replace(/-/g, ' ');
     }
 
     public readMarkdown() {
