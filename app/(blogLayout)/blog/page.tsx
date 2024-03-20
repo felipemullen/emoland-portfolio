@@ -4,6 +4,8 @@ import localFont from 'next/font/local';
 import { Spinner } from '../../components/spinner';
 import { BlogpostSnippet } from '../../components/blog/blogpost-snippet.component';
 
+export const dynamic = 'force-dynamic';
+
 const avenir = localFont({
     src: '../../../fonts/AvenirNextCondensed-UltraLight.ttf'
 });

@@ -10,6 +10,8 @@ import { Frown } from 'react-feather';
 import { LeavePostOrBlog } from '../../../components/blog/leave-post-blog.component';
 import { Author } from '../renderers/author.renderer';
 
+export const dynamic = 'force-dynamic';
+
 const avenir = localFont({
     src: '../../../../fonts/AvenirNextCondensed-UltraLight.ttf'
 });

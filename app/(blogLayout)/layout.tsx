@@ -2,6 +2,8 @@ import { LeavePostOrBlog } from '../components/blog/leave-post-blog.component';
 import localFont from 'next/font/local';
 import '../globals.css';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
     title: 'Felipe Mullen - Blog',
     description: 'The official blog of confusion'
