@@ -11,6 +11,8 @@ interface ImageChoice {
     aspect: string;
 }
 
+export const dynamic = 'force-dynamic';
+
 export default function PhotographyPage() {
 
     function chooseRandomValue(probabilityMap: Weight[]) {
