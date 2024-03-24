@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, ExternalLink, GitHub } from 'react-feather';
-import { LinkDark } from '../buttons/link-dark';
+import { ExternalLink, GitHub } from 'react-feather';
 import { LinkLight } from '../buttons/link-light';
 
 export interface ProjectCardProps {
@@ -20,7 +19,7 @@ export function ProjectCard(props: ProjectCardProps) {
         <div className="max-w-full bg-white border border-neutral-200 rounded-lg shadow dark:bg-neutral-800 dark:border-neutral-700 flex flex-col">
             <a href={pageLink}>
                 <div className="w-full bg-slate-800 rounded-t-lg border-b">
-                    <Image height={200} width={200} className="w-full rounded-t-lg" src={imageUrl} alt={props.title} />
+                    <Image height={500} width={500} className="w-full rounded-t-lg" src={imageUrl} alt={props.title} />
                 </div>
             </a>
             <div className="flex-1 p-3 flex flex-col">
@@ -31,14 +30,6 @@ export function ProjectCard(props: ProjectCardProps) {
                     <p className="mb-3 font-normal text-neutral-700 dark:text-neutral-400">{props.description}</p>
                 </div>
                 <div className="mt-auto flex">
-                    <div className="mr-auto">
-                        {/*
-                    <LinkDark href={pageLink} >
-                        <span className="mr-2">details</span>
-                        <ArrowRight size={14} />
-                    </LinkDark>
-                    */}
-                    </div>
                     {props.app && (
                         <LinkLight href={props.app} target="_blank" title="Go to App">
                             <ExternalLink size={16} />
