@@ -1,4 +1,7 @@
 {
+    "files.associations": {
+        "*.css": "tailwindcss",
+    },
     "workbench.editor.customLabels.enabled": true,
     "workbench.editor.customLabels.patterns": {
         "**/page.tsx": "${dirname} Page",
