@@ -2,9 +2,9 @@
 
 import * as THREE from 'three'
 import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { Canvas, Euler, ThreeElements, useThree } from '@react-three/fiber'
+import { Canvas, Euler } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useAnimations, Stage, Center, Grid, Text3D, Select } from '@react-three/drei';
-import { Spinner } from './spinner';
+import { CenteredSpinner } from './spinner';
 
 import chibiVertexShader from '../shaders/chibi-toon.vert';
 import chibiFragmentShader from '../shaders/chibi-toon.frag';
@@ -80,7 +80,7 @@ export function GltfViewer() {
     const parentRotation: Euler = [0, 0.84, 0];
 
     return (
-        <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<CenteredSpinner />}>
             <Canvas shadows camera={{ position: [18, 3, 15], fov: 35 }}>
                 <ambientLight intensity={ambientIntensity} color={ambientColor} />
                 <directionalLight intensity={directionalIntensity} position={directionalPosition} color={directionalColor} />

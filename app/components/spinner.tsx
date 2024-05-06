@@ -11,3 +11,11 @@ export function Spinner() {
         </div>
     );
 };
+
+export function CenteredSpinner() {
+    return (
+        <div className="absolute w-full h-full flex justify-center items-center">
+            <Spinner />
+        </div>
+    );
+}
