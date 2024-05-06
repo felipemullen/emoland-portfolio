@@ -18,9 +18,9 @@ export function ResumeSwitcher() {
                     {!!isDarkMode && <Sun />}
                 </button>
             </div>
-            <div className="grow w-full p-3 my-3 bg-zinc-50 border rounded">
-                {!isDarkMode && <iframe className="w-full h-full" src="/resume/felipe_mullen_cv_light_2024.pdf" />}
-                {!!isDarkMode && <iframe className="w-full h-full" src="/resume/felipe_mullen_cv_dark_2024.pdf" />}
+            <div className="grow w-full p-2 my-3 bg-zinc-50 border rounded">
+                {!isDarkMode && <iframe className="w-full h-full" src="/files/felipe_mullen_cv_light_2024.pdf" />}
+                {!!isDarkMode && <iframe className="w-full h-full" src="/files/felipe_mullen_cv_dark_2024.pdf" />}
             </div>
         </>
     );
