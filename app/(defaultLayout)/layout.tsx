@@ -14,8 +14,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="fixed h-screen w-screen thing">
-                    <div className="overlay h-screen w-screen">
+                <div className="fixed h-screen w-screen">
+                    <div className="h-screen w-screen">
                     </div>
                 </div>
                 {children}
