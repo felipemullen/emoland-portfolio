@@ -15,7 +15,7 @@ export default async function BlogHome() {
 
     return (
         <div className="m-4">
-            <h2 className="my-5 text-neutral-500 uppercase">
+            <h2 className="my-5 text-slate-700 dark:text-neutral-400">
                 <span className={`text-nowrap font-bold text-3xl ${avenir.className}`}>Latest Posts</span>
             </h2>
 

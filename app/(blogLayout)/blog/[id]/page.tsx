@@ -36,9 +36,9 @@ export default async function BlogPageView({ params }: any) {
     await post.readMetadata();
 
     return (
-        <div className="m-7">
+        <div className="px-4 sm:px-6 lg:px-8 my-7">
             <div className="mb-7">
-                <h2 className={`${avenir.className} text-neutral-500 uppercase text-4xl`}>{post.title}</h2>
+                <h2 className={`${avenir.className} text-3xl leading-8 font-extrabold uppercase tracking-tight text-slate-900 dark:text-neutral-400`}>{post.title}</h2>
                 <div className="font-light lowercase">
                     <small>Published <TimeAgo date={post.publishedDate} /></small>
                 </div>

@@ -21,7 +21,7 @@ export function BlogpostSnippet({ post }: BlogpostSnippetProps) {
         <div className="flex mb-3">
             <div style={idStyles} className="font-mono">#{post.id}</div>
             <div className="ms-4">
-                <a style={linkStyles} className="text-blue-600 hover:text-blue-800" href={post.href}>
+                <a style={linkStyles} className="text-blue-600 hover:text-blue-800 dark:text-indigo-400 dark:hover:text-indigo-500" href={post.href}>
                     <span className="capitalize">{post.title}</span>
                 </a>
                 {post.author &&
@@ -30,7 +30,7 @@ export function BlogpostSnippet({ post }: BlogpostSnippetProps) {
                         <span>{post.author}</span>
                     </span>
                 }
-                <div className="font-light lowercase">
+                <div className="font-light lowercase dark:text-neutral-300">
                     <small>Published <TimeAgo date={post.publishedDate} /></small>
                 </div>
             </div>

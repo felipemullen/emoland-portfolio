@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+    darkMode: 'selector',
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +9,9 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            backgroundColor: {
+                ind3x: '#222',
+            },
             aspectRatio: {
                 'sq': '1 / 1',
                 'xm': '4 / 3',

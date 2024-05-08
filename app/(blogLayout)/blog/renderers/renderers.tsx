@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Components } from 'react-markdown';
 
 export function AnchorRenderer(props: any) {
-    return (<a {...props} target="_blank" className="" rel="noopener noreferrer" />);
+    return (<a className="text-blue-600 hover:text-blue-800 dark:text-indigo-400 dark:hover:text-indigo-500" {...props} target="_blank" rel="noopener noreferrer" />);
 }
 
 export function ImgRenderer(props: { alt: string; }) {

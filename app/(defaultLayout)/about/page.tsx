@@ -88,7 +88,7 @@ export default function AboutPage() {
                             I have a lot of different <Anchor2 href="/projects">projects</Anchor2> 😅, and although&nbsp;
                             <Anchor2 href="/photography">photography</Anchor2> is a hobby of mine, I happen to share the same
                             passion for many other pursuits, such as drumming, <Anchor2 href="/poetry">poetry</Anchor2>,
-                            song writing, visual arts, and personal <Anchor2 href="/blog">writing</Anchor2>.
+                            song writing, visual arts, and <Anchor2 href="/blog">writing</Anchor2>.
                         </p>
                         <p>
                             As they say, time waits for no man, and there just isn&apos;t enough <Anchor2 href="#">time</Anchor2> to do everything 😑
