@@ -6,18 +6,14 @@ import '../globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Felipe Mullen | Three decades of confusion',
-    description: 'Waking up without memory and finding daily a new home',
+    title: 'Felipe Mullen | Software Engineer, Game Developer, Creative Enthusiast',
+    description: 'Waking up with a passion to make things',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="fixed h-screen w-screen">
-                    <div className="h-screen w-screen">
-                    </div>
-                </div>
                 {children}
                 <Sidebar />
             </body>

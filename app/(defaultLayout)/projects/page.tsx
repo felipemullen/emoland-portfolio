@@ -10,7 +10,7 @@ export default function ProjectsPage() {
             title: 'shawn-stone.com',
             description: 'A personal website for audiobook narrator Shawn Stone',
             // github: 'https://github.com/pastor-shawn/shawn-stone-web',
-            app: 'https://shawnstone.up.railway.app/'
+            app: 'https://shawnstonevoiceover.com/'
         },
         {
             image: 'tobindalton.png',

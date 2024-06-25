@@ -1,14 +1,9 @@
 import { Suspense } from 'react';
 import { BlogService } from '../../services/blog.service';
-import localFont from 'next/font/local';
 import { Spinner } from '../../components/spinner';
 import { BlogpostSnippet } from '../../components/blog/blogpost-snippet.component';
 
 export const dynamic = 'force-dynamic';
-
-const avenir = localFont({
-    src: '../../../fonts/AvenirNextCondensed-UltraLight.ttf'
-});
 
 export default async function BlogHome() {
     const posts = await BlogService.getPosts();
@@ -16,7 +11,7 @@ export default async function BlogHome() {
     return (
         <div className="m-4">
             <h2 className="my-5 text-slate-700 dark:text-neutral-400">
-                <span className={`text-nowrap font-bold text-3xl ${avenir.className}`}>Latest Posts</span>
+                <span className="text-nowrap font-bold text-2xl">LATEST POSTS</span>
             </h2>
 
             <Suspense fallback={<Spinner />}>
