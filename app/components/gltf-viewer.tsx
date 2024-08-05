@@ -1,22 +1,38 @@
 'use client';
 
 import * as THREE from 'three'
-import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { Canvas, Euler } from '@react-three/fiber'
+import React, { Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Canvas, Euler, MeshProps } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useAnimations, Stage, Center, Grid, Text3D, Select } from '@react-three/drei';
 import { CenteredSpinner } from './spinner';
 
 import chibiVertexShader from '../shaders/chibi-toon.vert';
 import chibiFragmentShader from '../shaders/chibi-toon.frag';
 
-
 const modelUrl = '/chibi-self.glb';
 
-function SelfMesh(props) {
+function SelfMesh(props: MeshProps) {
     const ref = useRef<THREE.Group>(null);
 
     const { animations, scene } = useGLTF(modelUrl);
     const { actions, mixer } = useAnimations(animations, ref);
+
+    const getMaterial = useCallback((mesh: THREE.Mesh) => {
+        const oldMaterial = mesh.material;
+        const glossValue = mesh.name.includes('hair') ? 25 : 0;
+
+        return new THREE.ShaderMaterial({
+            lights: true,
+            uniforms: {
+                ...THREE.UniformsLib.lights,
+                uGlossiness: { value: glossValue },
+                map: { value: oldMaterial['map'] },
+                uColor: { value: new THREE.Color('#ffffff') }
+            },
+            vertexShader: chibiVertexShader,
+            fragmentShader: chibiFragmentShader
+        });
+    }, []);
 
     useLayoutEffect(() => {
         scene.traverse(function (child) {
@@ -24,24 +40,10 @@ function SelfMesh(props) {
                 const mesh = child as THREE.SkinnedMesh;
                 mesh.castShadow = true;
                 mesh.receiveShadow = true;
-
-                const oldMaterial = mesh.material;
-                const glossValue = mesh.name.includes('hair') ? 25 : 0;
-
-                mesh.material = new THREE.ShaderMaterial({
-                    lights: true,
-                    uniforms: {
-                        ...THREE.UniformsLib.lights,
-                        uGlossiness: { value: glossValue },
-                        map: { value: oldMaterial['map'] },
-                        uColor: { value: new THREE.Color('#ffffff') }
-                    },
-                    vertexShader: chibiVertexShader,
-                    fragmentShader: chibiFragmentShader
-                });
+                mesh.material = getMaterial(mesh);
             }
         });
-    }, [scene]);
+    }, [scene, getMaterial]);
 
     useEffect(() => {
         for (const animationName in actions) {
@@ -58,9 +60,13 @@ export function GltfViewer() {
 
     const [rotateSpeed, setRotateSpeed] = useState<number>(0);
 
-    setTimeout(() => {
-        setRotateSpeed(0.2);
-    }, 1250);
+    useEffect(() => {
+        const t = setTimeout(() => {
+            setRotateSpeed(0.2);
+        }, 1250);
+
+        return () => clearTimeout(t);
+    }, []);
 
     const ambientColor = "#deb6b6";
     const ambientIntensity = 1.9000000000000001;

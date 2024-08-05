@@ -30,7 +30,7 @@ export default function AboutPage() {
             linkText: 'LinkedIn'
         },
         {
-            href: '/resume/felipe_mullen_cv_light_2024.pdf',
+            href: '/files/felipe_mullen_cv_light_2024.pdf',
             linkText: 'My Resume',
             description: 'PDF file download'
         },
@@ -69,7 +69,7 @@ export default function AboutPage() {
     ]), []);
 
     return (
-        <div className="relative h-full overflow-hidden bg-gray-50 pt-2 pb-6 sm:py-12 pl-16 pr-2">
+        <div className="relative h-full overflow-hidden bg-gray-50 pt-2 pb-6 sm:py-12 ---pl-16--- pl-2 pr-2">
             <div className="absolute inset-0 bg-grid bg-center"></div>
             <div className="relative bg-white px-3 sm:px-10 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/10 sm:mx-auto rounded sm:rounded-lg max-w-screen-md">
 
@@ -85,13 +85,13 @@ export default function AboutPage() {
                             <i>If you&apos;re interested in hiring me, feel free to view and/or download a copy of my <Anchor2 href="/resume">resume</Anchor2>.</i>
                         </p>
                         <p>
-                            I have a lot of different <Anchor2 href="/projects">projects</Anchor2>, and although&nbsp;
-                            <Anchor2 href="/photography">photography</Anchor2> is a hobby of mine, I happen to share the same
-                            passion for many other pursuits, such as drumming, <Anchor2 href="/poetry">poetry</Anchor2>,
-                            song writing, visual arts, and <Anchor2 href="/blog">writing</Anchor2>.
+                            I have a lot of different <Anchor2>projects</Anchor2>, and although&nbsp;
+                            <Anchor2>photography</Anchor2> is a hobby of mine, I happen to share the same
+                            passion for many other pursuits, such as drumming, <Anchor2>poetry</Anchor2>,
+                            song writing, visual arts, and <Anchor2>writing</Anchor2>.
                         </p>
                         <p>
-                            As they say, time waits for no man, and there just isn&apos;t enough <Anchor2 href="/">time</Anchor2> to do everything.
+                            As they say, time waits for no man, and there just isn&apos;t enough <Anchor2>time</Anchor2> to do everything.
                         </p>
                         {/* TODO: some verse */}
                     </div>
